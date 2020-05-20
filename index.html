@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="func()">
+    <div id="snake">
+      <div class="canv-div" >
+        <div class="score-div"  >
+        <div class ="speed_div">Score: <span id="myText"></span></div>
+        <div class ="speed_div tsize">Speed_X:  <button class="btn-speed">  <span id="speed_show_x" ></span> </button></div>
+        <div class ="speed_div tsize">Speed_Y:  <button class="btn-speed">  <span id="speed_show_y" ></span> </button></div>    
+          </div>
+            <canvas id="canvas" width="525" height="525"></canvas>
+      </div>
+      <div class="btn-div">
+
+    <!--  <button onclick="fast()" class="speed" id="speed_up">Speed up</button>
+     <button onclick="slow()" class="speed" id="speed_down">Speed down</button>-->
+     <button onclick="pauseGame()" class="speed1" >Pause</button>
+     <button onclick="resumeGame()" class="speed" >Resume</button>
+   </div>
+
+    </div>
+
+    <!-- Game over screen-->
+    <div id="game-over">
+      <h2>GAME OVER</h2>
+      <h1>Score:<span id="gameover"></span></h1>
+      <p>Press the button to start new game</p>
+      <button onclick="mfunc()" class="btn-new-game"><a id="newgame_gameover">Menu</a></button>
+    </div>
+    <!--Main menu screen-->
+    <div id="menu">
+      <h1 class="heading">Snake Game</h1>
+      <img src="image/snake.jpg" alt="snake" class="snake-image"><br>
+      <button onclick="game_start()" class="btn-new-game"><a id="newgame_menu">New Game</a></button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
